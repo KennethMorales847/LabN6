@@ -41,6 +41,17 @@ public:
 
 };
 
+//Subclases
+
+class Automovil : public Vehiculo {
+private:
+    int numPuerta;
+public:
+    void mostrarInfo(){
+        
+    }
+};
+
 int main()
 {
     std::cout << "Hello World!\n";
