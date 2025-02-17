@@ -48,7 +48,9 @@ private:
     int numPuerta;
 public:
     void mostrarInfo(){
-        
+        Vehiculo::mostrarInfo();
+        cout << endl <<
+            "Num. de puertas: " << numPuerta << endl;
     }
 };
 
