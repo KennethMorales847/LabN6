@@ -17,6 +17,28 @@ public:
         modelo = mo;
         precio = pr;
     }
+
+    //Funciones
+
+    void mostrarInfo() {
+        cout << endl <<
+            "Marca: " << marca << endl <<
+            "Modelo: " << modelo << endl <<
+            "Precio : Q" << precio << endl;
+    }
+
+    string getMarca() {
+        return marca;
+    }
+
+    string getModelo() {
+        return modelo;
+    }
+
+    double getPrecio() {
+        return precio;
+    }
+
 };
 
 int main()
