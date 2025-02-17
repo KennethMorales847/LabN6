@@ -12,8 +12,9 @@ private:
 
 public:
     //Constructor
-    Vehiculo(string ma, string mo, double pr):
-        marca(ma), modelo(mo), precio(pr){ }
+    Vehiculo(string ma, string mo, double pr) :
+        marca(ma), modelo(mo), precio(pr) {
+    }
 
     //Metodos
 
@@ -45,20 +46,21 @@ private:
 
 public:
     //Constructor
-    Cliente(string nom, int ed):
-        nombre(nom), edad(ed){ }
+    Cliente(string nom, int ed) :
+        nombre(nom), edad(ed) {
+    }
 
     //Metodos
 
     void mostrarInfo() {
-        cout << endl <<
+        cout << endl << "Cliente: " << endl <<
             "Nombre: " << nombre << endl <<
             "Edad: " << edad << endl;
     }
 
-    void compraVehiculo(Vehiculo &v) {
+    void compraVehiculo(Vehiculo& v) {
         cout << endl <<
-            "El cliente " << nombre << " ha comprado un " << v.getMarca() << " "<< v.getModelo() << endl;
+            "El cliente " << nombre << " ha comprado un " << v.getMarca() << " " << v.getModelo() << endl;
     }
 };
 
@@ -70,15 +72,17 @@ private:
 public:
 
     //Constructor
-    
+
     Automovil(string ma, string mo, double pr, int np) :
-       Vehiculo(ma, mo, pr), numPuerta(np) { }
+        Vehiculo(ma, mo, pr), numPuerta(np) {
+    }
 
     //Sobreescribir mostrarInfo 
 
-    void mostrarInfo() override{
+    void mostrarInfo() override {
+        cout << endl<< "Automovil: ";
         Vehiculo::mostrarInfo();
-        cout << endl <<
+        cout  <<
             "Num. de puertas: " << numPuerta << endl;
     }
 };
@@ -97,8 +101,9 @@ public:
     //Sobreescribir mostrarInfo 
 
     void mostrarInfo() override {
+        cout << endl << "Motocicleta: ";
         Vehiculo::mostrarInfo();
-        cout << endl <<
+        cout <<
             "Cilindraje: " << cilindraje << "cc" << endl;
     }
 };
@@ -117,16 +122,17 @@ public:
     //Sobreescribir mostrarInfo 
 
     void mostrarInfo() override {
+        cout << endl<< "Camioneta: " ;
         Vehiculo::mostrarInfo();
-        cout << endl <<
-            "Capacidad de carga: " << capCarga <<" kg" << endl;
+        cout<<
+            "Capacidad de carga: " << capCarga << " kg" << endl;
     }
 };
 
 int main()
 {
     Motocicleta m1("Honda", "2022", 16500, 1000);
-    Automovil a1("Toyota Camry", "2023",25000, 4);
+    Automovil a1("Toyota Camry", "2023", 25000, 4);
     Camioneta c1("Ford F-150", "2022", 35000, 1000);
     Cliente n1("Luis", 23);
 
